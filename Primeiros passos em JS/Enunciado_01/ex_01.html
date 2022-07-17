@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <title>Hello World</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto Condensed', sans-serif;      
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;        
+        flex-direction: column;
+        background-color: antiquewhite;
+        
+        
+    }
+    
+    span{
+        font-size: 5.0em;
+        margin-bottom: 20px;
+        
+        
+    }
+
+    #botão{
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: rgb(170, 71, 71);
+        cursor: pointer;
+        border: none;
+        font-weight: bold;
+        font-size: 1.5em;   
+
+
+    }
+    
+    #botão:disabled{
+            display: none;
+            
+    }
+
+    #botão:hover{
+        background-color: rgb(187, 88, 88);
+    }
+
+    
+</style>
+<body>
+    <span id="span_text"> ...</span>
+    <audio autoplay loop src="telefone.mp3" id="phone"></audio>
+    <audio src="Cavalo - Rodrigo Faro.mp3" id="cavalo" ></audio>
+    <button id="botão">Atender</button>
+</body>
+    
+
+</html>
+
+<script>
+    window.alert('Alô Mundo')
+    var text = window.document.querySelector('#span_text')
+    var telefone = window.document.querySelector('#phone')
+    var button = window.document.querySelector('#botão')
+    var cavalo = window.document.querySelector('#cavalo')
+    var sec = 0
+    var wall = window.document.querySelector('#corpo')
+    button.addEventListener('click', clicar)
+    function clicar(){
+        telefone.pause()
+        button.setAttribute('disabled', '')
+        text.innerHTML = 'Alô, Mundo?'
+        text.style.color = 'red'
+
+        setInterval(() => {
+        sec++
+        if (sec == 2){
+            text.innerHTML = 'Não, aqui é a Lua'
+            text.style.color = 'gray'
+        }
+        if (sec == 4){
+            text.innerHTML = 'Olá Lua, pode passar para a Terra?'
+            text.style.color = 'red'
+        }
+        if (sec == 7){
+            text.innerHTML = 'Tá certo Sr. Marte, só um instante'
+            text.style.color = 'gray'
+        }
+        if (sec == 10){
+            text.innerHTML = '...'
+            text.style.color = 'black'
+        }
+        if (sec == 14){
+            text.innerHTML = 'Alô, Alô marciano, aqui quem fala é a Terra'
+            text.style.color = 'green'
+        }
+        if (sec == 17){
+            text.innerHTML = 'Opa!'
+            text.style.color = 'red'
+        }
+
+        if (sec == 19){
+            text.innerHTML = 'Oq deseja, meu caro?'
+            text.style.color = 'green'
+        }
+        if (sec == 22){
+            text.innerHTML = 'É porque fiquei sabendo que você tem um animal intrigante'
+            text.style.color = 'red'
+        }
+
+        if (sec == 25){
+            text.innerHTML = 'e qual séria?'
+            text.style.color = 'green'
+        }
+
+        if (sec == 27){
+            text.innerHTML = 'CAVALO!!!!'
+            text.style.color = 'red'
+            cavalo.currentTime = 0.5
+            cavalo.play()
+            
+        }
+    }, 1000)
+
+    } 
+    
+ 
+
+    
+</script>

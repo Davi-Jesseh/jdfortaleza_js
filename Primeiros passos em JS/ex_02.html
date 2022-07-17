@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+        
+    }
+
+    span{
+        font-size: 5.0em;
+    }
+
+</style>
+<body>
+    <span id="num"></span>
+
+    <script>
+        
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite mais um número: '))
+        var res = n1 + n2
+        window.alert(`A soma entre ${n1} + ${n2} é igual a ${res}`)
+        var ntext = document.querySelector('#num')
+        ntext.innerHTML = `${res}`
+    </script>
+</body>
+</html>

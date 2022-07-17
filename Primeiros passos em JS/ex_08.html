@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap');
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;        
+        background-image: url('night.jfif');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        gap: 20px;
+        text-align: center;
+    }
+    span{
+        font-size: 2.0em;
+        color:white;
+        
+    }
+    #nome{
+        font-size: 3.0em;
+    }
+</style>
+<body>
+    <span>BOA NOITE</span>
+    <span id="nome"> </span>
+</body>
+</html>
+<script>
+    var digite = window.prompt('Digite o seu Nome: ')    
+    var nombre = window.document.querySelector('#nome')
+    nombre.innerHTML = `${digite}`
+    
+</script>
