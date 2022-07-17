@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menos ou Mais</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    span{
+        font-size: 4.0em;
+    }
+</style>
+<body>
+    <span id="resultado"></span>
+</body>
+</html>
+
+<script>
+    var valor = Number(window.prompt('Digite um número Positivo ou Negativo: '))
+    var res = window.document.querySelector('#resultado')
+    if (valor == 0){
+        res.innerHTML = `${valor} é Neutro`
+
+        if (valor < 0){
+            res.innerHTML = `${valor} é Negativo`
+        }
+        if (valor > 0){
+            res.innerHTML = `${valor} é Positivo`
+        }
+    }
+  
+</script>
