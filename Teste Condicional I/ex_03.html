@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Maior entre eles</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    span{
+        font-size: 3.0em;
+    }
+</style>
+<body>
+    <span id="resultado"></span>
+</body>
+</html>
+
+<script>
+    var n1 = Number(window.prompt('Digite um número: '))
+    var n2 = Number(window.prompt('Digite outro número: '))
+    var n3 = Number(window.prompt('Digite mais um número: '))
+    var res = window.document.querySelector('#resultado')
+    if (n1 < n2 && n2 > n3){
+        res.innerHTML = `${n2}`
+    }
+    else if (n1 > n2 && n1 > n3){
+        res.innerHTML = `${n1}`
+    }
+    else if(n1 == n2 && n2 == n3){
+        res.innerHTML = `Todos são iguais`
+    }
+    else{
+        res.innerHTML = `${n3}`
+    }
+</script>
