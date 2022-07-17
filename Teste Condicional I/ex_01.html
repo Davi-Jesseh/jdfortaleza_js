@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Maior Número</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    h2{
+        width: 200px;
+    }
+
+    span{
+        font-size: 2.0em;
+    }
+</style>
+<body>
+    <h2 id="text"></h2>
+    <span id="maior"></span>
+</body>
+</html>
+<script>
+    var n1 = Number(window.prompt('Digite um número: '))
+    var n2 = Number(window.prompt('Digite outro número: '))
+    var texto = window.document.querySelector('#text')
+    var maior = window.document.querySelector('#maior')
+    if (n1 > n2) {
+        texto.innerHTML = `O maior número entre ${n1} e ${n2} é :`
+        maior.innerHTML = `${n1}`
+    }
+    else{
+        texto.innerHTML = `O maior número entre ${n1} e ${n2} é :`
+        maior.innerHTML = `${n2}`
+    }
+</script>
