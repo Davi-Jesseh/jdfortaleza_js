@@ -1,0 +1,22 @@
+<script>
+    var n = 0
+    while(n == 0){
+        var turno = window.prompt('Em qual turno você estudar (M - Matutino, V - Verpetino ou N - Nortuno)? ')
+       
+        if (turno.toUpperCase() === 'M' || turno.toUpperCase() === 'MATUTINO'){
+            window.alert('Bom Dia')
+            break
+        }
+        if (turno.toUpperCase() === 'V' || turno.toUpperCase() === 'VERPETINO'){
+            window.alert('Boa Tarde')
+            break
+        }
+        if (turno.toUpperCase() === 'N' || turno.toUpperCase() === 'NORTUNO'){
+            window.alert('Boa Noite')
+            break
+        }
+        else{
+            window.alert('[ERRO] Valor Inválido! Por favor, tente novamente.')
+        }
+    }
+</script>
