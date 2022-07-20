@@ -1,0 +1,28 @@
+<script>
+    var n1 = window.prompt('Digite um número: ')
+    var n2 = window.prompt('Digite outro número: ')
+    var n3 = window.prompt('Digite mais um número: ')
+    var maior = 0
+    var menor = 0
+    if (n2 < n1 && n1 > n3 ){
+        maior = n1     
+    }
+    else {
+        menor = n1
+    }
+    
+    if (n3 > n2 && n3 > n1){
+        maior = n3
+    }
+    else{
+        menor = n3
+    }
+    if (n2 > n1 && n3 < n2 ){
+        maior = n2
+    }
+    else {
+        menor = n2
+    }
+
+    window.alert(`O maior número é ${maior} e o menor número é ${menor}`)
+</script>
