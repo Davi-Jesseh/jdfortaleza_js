@@ -1,24 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border;        
+     }
+     body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: antiquewhite;        
+        
+     }
 
+     #container{
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        flex-direction: column;
+        gap: 20px;
+        
+     }
+     
+     
+     .inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+     }
+     .media_span{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+     }
+
+     
+    
+        
+</style>
+<body>  
+        <div id="container" >            
+                <div class="inputs">
+                    <span>Primeira nota: </span>
+                    <input type="text" id="parcial_01" >
+                    <span>Segunda nota: </span>
+                    <input type="text" id="parcial_02" >
+                </div>
+                <input type="button" value="Enviar" id="botao" onclick="clicar()">
+
+                <div class="media_span">
+                    <span>Sua Média: </span>
+                    <span id="nota"> #</span>
+                    <span id = "situação" style="font-size:large"> - - - </span>
+                </div>
+        </div>
+
+    
+</body>
+</html>
 <script>
+    function clicar(){
+    var n1 = Number(window.document.getElementById('parcial_01').value)
+    var n2 = Number(window.document.getElementById('parcial_02').value)      
+    var nota = window.document.getElementById('nota')
+    var sit = window.document.getElementById('situação')
+    var media = (n1 + n2) / 2
+    console.log(media)
     
-    var n1 = Number(window.prompt('Nota da primeira prova parcial: '))
-    var n2 = Number(window.prompt('Nota da segunda prova parcial: '))
-    var media = (n1 + n2 ) / 2
-    
-    
-    if (media == 10){
-        alert(`Sua média foi ${media}`)
-        alert('Parabéns, você foi aprovado com êxito, continue assim que você vai longe')
 
-    }
- 
-    else if (media >= 7){
-        alert(`Sua média foi ${media}`)
-        alert('Aprovado! Parabéns, continue assim')
+    if (media >= 7){
+        nota.innerHTML = `${media}`
+        sit.innerHTML = `Aprovado`
+        sit.style.color = 'green'
     }
     else if (media < 7){
-        alert(`Sua média foi ${media}`)
-        alert('Reprovado! Estude mais.')
+        nota.innerHTML = `${media}`
+        sit.innerHTML = `Reprovado`
+        sit.style.color = 'red'
     }
-  
+    else if (media == 10){
+        nota.innerHTML = `${media}`
+        sit.innerHTML = `Mais que Aprovado : )`
+        sit.style.color = 'green'
+    }
+ }
 </script>
