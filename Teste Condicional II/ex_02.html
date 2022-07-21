@@ -1,0 +1,17 @@
+<script>
+    h = window.prompt('Que horas são? ')
+    while(h > 24){
+        window.alert('Valor Inválido! Tente novamente.')
+        h = window.prompt('Que horas são? ')
+    }
+    if(h < 12){
+        window.alert('Bom dia')
+    }
+    else if (h < 18){
+        window.alert('Boa tarde')
+    }
+    else if (h >= 18){
+        window.alert('Boa noite')
+    }
+
+</script>
