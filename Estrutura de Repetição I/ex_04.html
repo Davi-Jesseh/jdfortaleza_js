@@ -1,0 +1,24 @@
+<script>
+    var b = 5
+    var maior = 0
+    var menor = 0
+    for(a = 1; a<=b; a++){
+        x = window.prompt(`Digite o ${a}° número: `)
+        if (maior < x){
+            maior = x
+            
+        }
+        else{
+            menor = x
+        }
+       
+        if (menor == 0 && x > menor) {
+            menor = x
+        }
+        
+
+        
+    }
+    window.alert(maior)
+    window.alert(menor)
+</script>
