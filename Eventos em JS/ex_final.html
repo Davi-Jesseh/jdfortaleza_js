@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+    <meta charset="UTF-8">   
+    <title>Aniversário</title>
+ </head>
+ <style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: antiquewhite;
+    }
+    #caixa{
+        width: 500px;
+        height: 500px;        
+        background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.0em;
+    }
+ </style>
+ <body>
+    <div id="caixa">
+       
+    </div>
+ </body>
+ </html>
+<script>
+    var c = window.document.getElementById('caixa')
+    c.addEventListener('mouseout', fora)        
+    window.confirm('1')
+    function fora(){
+        c.innerText = '8'
+        c.style.background = 'white'
+        
+    }
+
+</script>
