@@ -1,0 +1,13 @@
+<script>
+    var n = window.prompt('Você quer saber a média de quantas notas?')
+    var d = n
+    var cont = 0
+    var média = 0
+    for(n >= 0; n--;){
+        cont++
+        var dividendo = Number(window.prompt(`Digite a nota do ${cont}° :`))
+        média = média + dividendo
+    }
+    média / d
+    window.alert(`A média das ${d} prova(s) deu ${média}`)
+</script>
